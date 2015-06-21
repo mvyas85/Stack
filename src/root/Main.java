@@ -27,7 +27,7 @@ public class Main {
 		stck.displayStack();
 		
 		
-		System.out.println("Trying to pop first");
+		System.out.println("Trying to pop now");
 		
 		stck.pop();
 		stck.pop();
