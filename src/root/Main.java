@@ -4,48 +4,50 @@ import java.awt.DisplayMode;
 
 public class Main {
 	public static void main(String args[]){
-		TheStack stck = new TheStack(6);
+		TheStack stack = new TheStack(6);
 		
 		System.out.println("Displaying Stack: \n");
 		
-		stck.displayStack();
+		stack.displayStack();
 		
 		System.out.println("Trying to push values now:: \n ");
 		
-		stck.push("Hello");
-		stck.push("world");
-		stck.push("This");
-		stck.push("is");
-		stck.push("Manisha");
-		stck.push("world");
+		stack.push("Hello");
+		stack.push("world");
+		stack.push("This");
+		stack.push("is");
+		stack.push("Manisha");
+		
+		System.out.println("Peeking top item in the stack:"+stack.peek());
+		stack.push("world");
 		
 		
-		stck.push("This");
-		stck.push("is");
-		stck.push("Manisha");
+		stack.push("This");
+		stack.push("is");
+		stack.push("Manisha");
 		
-		stck.displayStack();
+		stack.displayStack();
 		
 		
 		System.out.println("Trying to pop now");
 		
-		stck.pop();
-		stck.pop();
-		stck.pop();
-		stck.pop();
-		stck.pop();
-		stck.pop();
-		stck.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
+		stack.pop();
 
 		
 		System.out.println("Displaying stack now ");
-		stck.displayStack();
-		stck.push("Rajan");
-		stck.push("This");
-		stck.push("is");
-		stck.push("Manisha");
+		stack.displayStack();
+		stack.push("Rajan");
+		stack.push("This");
+		stack.push("is");
+		stack.push("Manisha");
 		System.out.println("Displaying stack now ");
-		stck.displayStack();
+		stack.displayStack();
 	
 	}
 }

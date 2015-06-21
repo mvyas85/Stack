@@ -2,16 +2,16 @@ package root;
 
 public class TheStack {
 
-	private String[] arr;
+	private Object[] arr;
 	private int Max;
 	private int top= -1;
 	
 	public TheStack(int stackSize){
 		this.Max = stackSize;
-		arr = new String[Max];
+		arr = new Object[Max];
 	}
 	
-	public void push(String pushStr){
+	public void push(Object pushStr){
 		
 		if (isFull())
 		{
@@ -24,14 +24,14 @@ public class TheStack {
 		
 	}
 	
-	public String pop(){
+	public Object pop(){
 		System.out.print("\nPOP"+ (top+1) +"= ");
 		if(isEmpty())
 		{
 			System.out.println("Empty Stack");
 			return "-1";
 		}
-		String str = arr[top] ;
+		Object str = arr[top] ;
 		top--;
 		System.out.print(str);
 		return str;
@@ -47,6 +47,11 @@ public class TheStack {
 		for(int i =0 ;i<=top;i++){
 			System.out.println("[[[[["+i+"]]]]]] = " + arr[i]);
 		}
+	}
+	
+	public Object peek(){
+		Object str = arr[top];
+		return str;
 	}
 	
 	private boolean isEmpty(){
